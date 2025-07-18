@@ -39,6 +39,15 @@ h1 {
   overflow-wrap: break-word;
 }
 
+.message p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.message p:last-child {
+  margin-bottom: 0;
+}
+
 .message.user {
   background-color: #d1e7ff;
   float: right;

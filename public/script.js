@@ -28,8 +28,8 @@ form.addEventListener('submit', async function (e) {
     }
 
     const data = await response.json();
-    // Update the placeholder's text with the actual reply
-    botMessageElement.textContent = data.reply;
+    // Parse markdown from the reply and render it as HTML
+    botMessageElement.innerHTML = marked.parse(data.reply);
   } catch (error) {
     console.error('Error:', error);
     // Or update it with an error message
